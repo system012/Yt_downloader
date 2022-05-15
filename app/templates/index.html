@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/static/style.css">
+    </head>
+    <body>
+        <h1>Download a youtube video</h1>
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <div class="forms">
+                <p>
+                    <p id="label">{{ form.link.label }}<br></p>
+                    {{ form.link(size=32) }}
+                    {% for error in form.link.errors %}
+                    <span style="color: red;">[{{ error }}]</span>
+                    {% endfor %}
+                </p>
+            </div>
+            <button type="submit" class="icon">
+                <div class="cloud">
+                    <div class="puff puff-1"></div>
+                    <div class="puff puff-2"></div>
+                    <div class="puff puff-3"></div>
+                    <div class="puff puff-4"></div>
+                    <div class="puff puff-5"></div>
+                    <div class="puff puff-6"></div>
+                    <div class="puff puff-7"></div>
+                    <div class="puff puff-8"></div>
+                    <div class="puff puff-9"></div>
+                    <div class="puff puff-10"></div>
+                    <div class="cloud-core"></div>
+                    <div class="check"></div>
+                    <div class="arrow">
+                        <div class="arrow-stem">
+                            <div class="arrow-l-tip"></div>
+                            <div class="arrow-r-tip"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="preload">
+                    <div class="drop drop-1"></div>
+                    <div class="drop drop-2"></div>
+                    <div class="drop drop-3"></div>
+                </div>
+                <div class="progress"></div>
+            </button>
+            <!-- partial -->
+              <script  src="/static/script.js"></script>
+        </form>
+    </body>
+</html>
+
+<!-- partial:index.partial.html -->
+
+

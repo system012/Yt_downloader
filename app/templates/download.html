@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Hello</title>
+    </head>
+    <body>
+        <h1>Downloadable Youtube links</h1>
+            <div>    
+                <ul> {% for title in titles %}
+                    <li><a href='download/{{ loop.index0 }}'>{{ title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <form method='post' action="download/all">
+                {{ form.csrf_token }}
+                <p>{{ form.tar() }}</p>
+            </form>
+        </body>
+</html>
